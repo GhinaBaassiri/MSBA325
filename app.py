@@ -17,7 +17,7 @@ st.markdown("---")
 # Load data function
 @st.cache_data
 def load_data():
-    url = LINK_URL
+    url = st.secrets["LINK_URL"]
     response = requests.get(url)
     df = pd.read_csv(io.StringIO(response.text))
     
