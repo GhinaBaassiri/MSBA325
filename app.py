@@ -17,7 +17,7 @@ st.markdown("---")
 # Load data function
 @st.cache_data
 def load_data():
-    url = 'https://linked.aub.edu.lb/pkgcube/data/22fb9db8977546c7219d549143714902_20240905_224655.csv'
+    url = LINK_URL
     response = requests.get(url)
     df = pd.read_csv(io.StringIO(response.text))
     
